@@ -1,5 +1,20 @@
 # Net 6 Core Api - Boilerplate with Autofac DI
 
+## **BREAKING** - If you are using this setup in `.Net 7 `
+
+In `Startup.cs` You have to include following line 
+```            
+            // I have to include this, because it messes up automatically resolving my post/put methods
+            // it was introduced as breaking change in https://learn.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/7.0/api-controller-action-parameters-di
+            // Without this I would have to mark every Api Endpoint that is POST/PUT with [FromBody] attribute
+            // This is directly tied to my question on GitHub: https://github.com/dotnet/aspnetcore/issues/45124
+            // And this issue with autodiscovery of AutoFac https://github.com/dotnet/aspnetcore/issues/43363
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.DisableImplicitFromServicesParameters = true;
+            });
+```
+
 
 ## What ?
 
