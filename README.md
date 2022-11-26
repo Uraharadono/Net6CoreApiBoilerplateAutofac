@@ -1,0 +1,2 @@
+# Net6CoreApiBoilerplateAutofac
+Net6CoreApiBoilerplateAutofac
