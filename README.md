@@ -1,9 +1,9 @@
-# Net6CoreApiBoilerplate
+# Net 6 Core Api - Boilerplate with Autofac DI
 
 
 ## What ?
 
-A .Net 6 API project (I'll make a.Net 7 one soon because I'm terrible at naming and couldn't figure out a proper one without naming it), which includes:
+A .Net 6 API project (I won't upgrade to .Net 7 cause my title is too specific :( ), which includes:
 
 - Microsoft.AspNetCore.Identity that is managing users and is using JSON Web Token (JWT) for auth. It is based on Identity Server, and you can easily change it to use Identity Server instead (see AuthenticationHelper.cs line 57).
 - We'll use Autofac to register our Dependency Injection code. I prefer to use the built in Microsoft one, but I did it with Autofac just for exercise.
